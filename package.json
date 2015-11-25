@@ -1,0 +1,45 @@
+{
+  "name": "elasticsearch-cli",
+  "version": "0.1.0",
+  "description": "Utility CLI to help manage Elasticsearch, supports AWS IAM user",
+  "preferGlobal": true,
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "bin": {
+    "elasticsearch": "index.js"
+  },
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs .",
+    "test": "npm run-script lint && npm run-script checkStyle",
+    "prepublish": "npm test && npm prune"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:confuser/elasticsearch-cli.git"
+  },
+  "keywords": [
+    "elastic",
+    "search",
+    "elasticsearch",
+    "cli"
+  ],
+  "author": "James Mortemore <jamesmortemore@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/confuser/elasticsearch-cli/issues"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.19",
+    "commander": "^2.9.0",
+    "elasticsearch": "^10.0.0",
+    "http-aws-es": "^1.1.2",
+    "update-notifier": "^0.5.0"
+  },
+  "devDependencies": {
+    "jscs": "2.5.1",
+    "jshint": "2",
+    "jshint-full-path": "1.1.1"
+  }
+}
