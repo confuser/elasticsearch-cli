@@ -20,7 +20,7 @@ module.exports = function (cmd) {
           prettyPrintJson(result)
         })
       } else if (allowedOperations.indexOf(operation) !== -1) {
-        operations.operation(client, template, data)
+        operations[operation](client, template, data)
       } else {
         handleError(new Error('Invalid operation, please choose ' + allowedOperations.join(', ')))
       }
