@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Utility CLI to help manage Elasticsearch, supports AWS IAM user",
   "preferGlobal": true,
   "publishConfig": {
